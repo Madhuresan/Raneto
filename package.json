@@ -32,6 +32,7 @@
     "start": "DEBUG=raneto node example/server.js",
     "start_win": "set DEBUG=raneto&&node example/server.js",
     "test": "npm run lint && mocha --reporter spec test/*.js",
+    "test-mochaawesome": "nyc --reporter=html mocha test/*.js --reporter mochawesome --exit",
     "postinstall": "npm run gulp",
     "gulp": "gulp",
     "lint": "./node_modules/.bin/eslint bin/*.js app/**/*.js example/**/*.js test/*.js translate/*.json gulpfile.js"
